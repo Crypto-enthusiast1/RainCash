@@ -1,0 +1,113 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Arial', sans-serif;
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   background: #6b48ff;
+   /* Базовый цвет фона */
+}
+
+.app-wrapper {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+   /* Изолируем анимацию фона */
+}
+
+.background-container {
+   position: fixed;
+   /* Фиксируем на весь экран */
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+}
+
+/* Анимированный фон с переливанием */
+.background-container::before,
+.background-container::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   opacity: 0.6;
+}
+
+.background-container::before {
+   background: radial-gradient(circle at 20% 30%, #a855f7 0%, transparent 70%),
+      radial-gradient(circle at 80% 70%, #60a5fa 0%, transparent 70%),
+      radial-gradient(circle at 50% 10%, #8b5cf6 0%, transparent 70%);
+   animation: wave 15s infinite ease-in-out;
+}
+
+.background-container::after {
+   background: radial-gradient(circle at 30% 80%, #7dd3fc 0%, transparent 70%),
+      radial-gradient(circle at 70% 20%, #d8b4fe 0%, transparent 70%),
+      radial-gradient(circle at 10% 50%, #a78bfa 0%, transparent 70%);
+   animation: wave 20s infinite ease-in-out;
+}
+
+@keyframes wave {
+   0% {
+      transform: translate(0, 0) scale(1);
+      opacity: 0.6;
+   }
+
+   50% {
+      transform: translate(50px, 30px) scale(1.1);
+      opacity: 0.8;
+   }
+
+   100% {
+      transform: translate(0, 0) scale(1);
+      opacity: 0.6;
+   }
+}
+
+/* Стили для капель дождя */
+.rain-drop {
+   position: absolute;
+   top: -50px;
+   /* Начинаются выше экрана */
+   width: 2px;
+   /* Базовая ширина, переопределяется в JS */
+   height: 30px;
+   /* Базовая высота, переопределяется в JS */
+   background: linear-gradient(to bottom,
+         rgba(147, 197, 253, 0.2),
+         /* Более яркий голубой */
+         rgba(147, 197, 253, 0.9));
+   /* Увеличиваем насыщенность */
+   border-radius: 50% / 20%;
+   /* Более вытянутая форма */
+   box-shadow: 0 0 8px rgba(147, 197, 253, 0.5);
+   /* Усиливаем свечение */
+   animation: fall linear forwards;
+   z-index: -1;
+   /* Помещаем позади контента */
+}
+
+@keyframes fall {
+   0% {
+      transform: translateY(0);
+      opacity: 0.7;
+   }
+
+   100% {
+      transform: translateY(100vh);
+      opacity: 0;
+   }
+}

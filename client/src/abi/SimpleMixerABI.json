@@ -1,0 +1,273 @@
+{
+   "abi": [
+      {
+         "inputs": [
+            {
+               "internalType": "address",
+               "name": "_feeRecipient",
+               "type": "address"
+            },
+            {
+               "internalType": "uint256",
+               "name": "_feePercentage",
+               "type": "uint256"
+            }
+         ],
+         "stateMutability": "nonpayable",
+         "type": "constructor"
+      },
+      {
+         "anonymous": false,
+         "inputs": [
+            {
+               "indexed": true,
+               "internalType": "bytes32",
+               "name": "commitment",
+               "type": "bytes32"
+            },
+            {
+               "indexed": false,
+               "internalType": "uint256",
+               "name": "denomination",
+               "type": "uint256"
+            }
+         ],
+         "name": "Deposit",
+         "type": "event"
+      },
+      {
+         "anonymous": false,
+         "inputs": [
+            {
+               "indexed": false,
+               "internalType": "address",
+               "name": "token",
+               "type": "address"
+            }
+         ],
+         "name": "TokenSupportAdded",
+         "type": "event"
+      },
+      {
+         "anonymous": false,
+         "inputs": [
+            {
+               "indexed": false,
+               "internalType": "bytes32",
+               "name": "commitment",
+               "type": "bytes32"
+            },
+            {
+               "indexed": false,
+               "internalType": "address",
+               "name": "to",
+               "type": "address"
+            }
+         ],
+         "name": "Withdrawal",
+         "type": "event"
+      },
+      {
+         "inputs": [
+            {
+               "internalType": "address",
+               "name": "token",
+               "type": "address"
+            }
+         ],
+         "name": "addTokenSupport",
+         "outputs": [],
+         "stateMutability": "nonpayable",
+         "type": "function"
+      },
+      {
+         "inputs": [
+            {
+               "internalType": "bytes32",
+               "name": "",
+               "type": "bytes32"
+            }
+         ],
+         "name": "commitments",
+         "outputs": [
+            {
+               "internalType": "bool",
+               "name": "",
+               "type": "bool"
+            }
+         ],
+         "stateMutability": "view",
+         "type": "function"
+      },
+      {
+         "inputs": [
+            {
+               "internalType": "uint256",
+               "name": "",
+               "type": "uint256"
+            }
+         ],
+         "name": "denominations",
+         "outputs": [
+            {
+               "internalType": "uint256",
+               "name": "",
+               "type": "uint256"
+            }
+         ],
+         "stateMutability": "view",
+         "type": "function"
+      },
+      {
+         "inputs": [
+            {
+               "internalType": "bytes32",
+               "name": "commitment",
+               "type": "bytes32"
+            },
+            {
+               "internalType": "uint256",
+               "name": "denomination",
+               "type": "uint256"
+            }
+         ],
+         "name": "deposit",
+         "outputs": [],
+         "stateMutability": "payable",
+         "type": "function"
+      },
+      {
+         "inputs": [
+            {
+               "internalType": "uint256",
+               "name": "",
+               "type": "uint256"
+            }
+         ],
+         "name": "depositsCount",
+         "outputs": [
+            {
+               "internalType": "uint256",
+               "name": "",
+               "type": "uint256"
+            }
+         ],
+         "stateMutability": "view",
+         "type": "function"
+      },
+      {
+         "inputs": [],
+         "name": "feePercentage",
+         "outputs": [
+            {
+               "internalType": "uint256",
+               "name": "",
+               "type": "uint256"
+            }
+         ],
+         "stateMutability": "view",
+         "type": "function"
+      },
+      {
+         "inputs": [],
+         "name": "feeRecipient",
+         "outputs": [
+            {
+               "internalType": "address",
+               "name": "",
+               "type": "address"
+            }
+         ],
+         "stateMutability": "view",
+         "type": "function"
+      },
+      {
+         "inputs": [],
+         "name": "getDenominations",
+         "outputs": [
+            {
+               "internalType": "uint256[]",
+               "name": "",
+               "type": "uint256[]"
+            }
+         ],
+         "stateMutability": "view",
+         "type": "function"
+      },
+      {
+         "inputs": [
+            {
+               "internalType": "uint256",
+               "name": "denomination",
+               "type": "uint256"
+            }
+         ],
+         "name": "isValidDenomination",
+         "outputs": [
+            {
+               "internalType": "bool",
+               "name": "",
+               "type": "bool"
+            }
+         ],
+         "stateMutability": "view",
+         "type": "function"
+      },
+      {
+         "inputs": [
+            {
+               "internalType": "address",
+               "name": "",
+               "type": "address"
+            }
+         ],
+         "name": "supportedTokens",
+         "outputs": [
+            {
+               "internalType": "bool",
+               "name": "",
+               "type": "bool"
+            }
+         ],
+         "stateMutability": "view",
+         "type": "function"
+      },
+      {
+         "inputs": [
+            {
+               "internalType": "bytes32",
+               "name": "commitment",
+               "type": "bytes32"
+            },
+            {
+               "internalType": "address payable",
+               "name": "to",
+               "type": "address"
+            }
+         ],
+         "name": "withdraw",
+         "outputs": [],
+         "stateMutability": "nonpayable",
+         "type": "function"
+      },
+      {
+         "inputs": [
+            {
+               "internalType": "uint256",
+               "name": "",
+               "type": "uint256"
+            }
+         ],
+         "name": "withdrawalsCount",
+         "outputs": [
+            {
+               "internalType": "uint256",
+               "name": "",
+               "type": "uint256"
+            }
+         ],
+         "stateMutability": "view",
+         "type": "function"
+      }
+   ]
+}

@@ -1,0 +1,378 @@
+.status {
+   font-size: 1.1rem;
+   color: #333;
+   margin-bottom: 20px;
+   word-break: break-all;
+}
+
+.network-info {
+   font-size: 1rem;
+   color: #555;
+   margin-bottom: 10px;
+}
+
+.contract-balance {
+   font-size: 1rem;
+   color: #2ecc71;
+   margin-bottom: 10px;
+}
+
+.fee-info {
+   font-size: 1rem;
+   color: #e74c3c;
+   margin: 0;
+   text-align: right;
+}
+
+.section {
+   margin: 20px 0;
+}
+
+.section-title {
+   font-size: 1.5rem;
+   color: #6b48ff;
+   margin-bottom: 15px;
+}
+
+.tabs {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 20px;
+}
+
+.tab {
+   flex: 1;
+   padding: 10px;
+   font-size: 1.2rem;
+   background-color: #f0f0f0;
+   border: none;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.tab.active {
+   background-color: #6b48ff;
+   color: white;
+}
+
+.tab:hover {
+   background-color: #ddd;
+}
+
+.input-group {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+
+.input-with-balance {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+}
+
+.input {
+   padding: 12px;
+   font-size: 1rem;
+   border: 2px solid #ddd;
+   border-radius: 10px;
+   outline: none;
+   transition: border-color 0.3s ease;
+   width: 100%;
+}
+
+.input:focus {
+   border-color: #6b48ff;
+}
+
+.input[readonly] {
+   color: #555;
+   background-color: #f0f0f0;
+}
+
+.input-error {
+   border-color: #e74c3c;
+}
+
+.wallet-balance {
+   font-size: 0.9rem;
+   color: #555;
+   margin-top: 5px;
+}
+
+.error-message {
+   color: #e74c3c;
+   font-size: 0.9rem;
+   margin-top: -10px;
+   margin-bottom: 10px;
+}
+
+.slider-container {
+   margin-top: 20px;
+   padding: 15px;
+   background: #f0f0f0;
+   border-radius: 10px;
+}
+
+.denomination-slider {
+   position: relative;
+   width: 100%;
+}
+
+.custom-slider {
+   position: relative;
+   width: 100%;
+   height: 5px;
+   margin: 20px 0;
+}
+
+.slider-track {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: white;
+   border: 1px solid #6b48ff;
+   border-radius: 5px;
+}
+
+.slider-filled {
+   position: absolute;
+   height: 100%;
+   background: #6b48ff;
+   border-radius: 5px 0 0 5px;
+   transition: width 0.3s ease;
+}
+
+.circle-overlay {
+   position: absolute;
+   top: -18%;
+   width: 100%;
+   transform: translateY(-50%);
+   display: flex;
+   justify-content: space-between;
+}
+
+.circle {
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   border: 2px solid #6b48ff;
+   background-color: white;
+   cursor: pointer;
+   position: absolute;
+   transform: translateX(-50%);
+   z-index: 2;
+}
+
+.circle.filled {
+   background-color: #6b48ff;
+}
+
+.circle:not(.filled):hover {
+   background-color: #ddd;
+}
+
+.slider-labels {
+   display: flex;
+   justify-content: space-between;
+   font-size: 0.8rem;
+   color: #333;
+}
+
+.slider-label {
+   text-align: center;
+   flex: 1;
+}
+
+.slider-label.active {
+   color: #6b48ff;
+   font-weight: bold;
+}
+
+.button {
+   padding: 12px;
+   font-size: 1rem;
+   border: none;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+   transform: scale(1.05);
+}
+
+.connect-button {
+   background-color: #6b48ff;
+   color: white;
+}
+
+.connect-button:hover {
+   background-color: #5a3de6;
+}
+
+.deposit-button {
+   background-color: #2ecc71;
+   color: white;
+}
+
+.deposit-button:hover {
+   background-color: #27ae60;
+}
+
+.withdraw-button {
+   background-color: #3498db;
+   color: white;
+}
+
+.withdraw-button:hover {
+   background-color: #2980b9;
+}
+
+.copy-button {
+   display: block;
+   background-color: #f39c12;
+   color: white;
+   margin: 10px auto;
+}
+
+.copy-button:hover {
+   background-color: #e67e22;
+}
+
+.clear-button {
+   display: block;
+   background-color: #e74c3c;
+   color: white;
+   margin: 10px auto;
+}
+
+.clear-button:hover {
+   background-color: #c0392b;
+}
+
+.disconnect-button {
+   position: fixed;
+   top: 20px;
+   right: 20px;
+   background-color: #e74c3c;
+   color: white;
+   padding: 8px 16px;
+   font-size: 0.9rem;
+   z-index: 10;
+}
+
+.disconnect-button:hover {
+   background-color: #c0392b;
+}
+
+.deposit-note {
+   margin-top: 20px;
+   padding: 15px;
+   background: #f0f0f0;
+   border-radius: 10px;
+   text-align: left;
+   word-wrap: break-word;
+}
+
+.note-warning {
+   color: #e74c3c;
+   font-size: 0.9rem;
+   margin-top: 5px;
+   text-align: center;
+}
+
+.pool-stats {
+   margin-top: 20px;
+   padding: 15px;
+   background: #f0f0f0;
+   border-radius: 10px;
+   text-align: left;
+}
+
+.stat-item {
+   border-bottom: 1px solid #ddd;
+   padding: 10px 0;
+}
+
+.stat-item:last-child {
+   border-bottom: none;
+}
+
+.stat-item p {
+   margin: 5px 0;
+   font-size: 0.9rem;
+}
+
+.transaction-history {
+   margin-top: 20px;
+   padding: 15px;
+   background: #f0f0f0;
+   border-radius: 10px;
+   text-align: left;
+   max-height: 300px;
+   overflow-y: auto;
+}
+
+.transaction-item {
+   border-bottom: 1px solid #ddd;
+   padding: 10px 0;
+}
+
+.transaction-item:last-child {
+   border-bottom: none;
+}
+
+.transaction-item p {
+   margin: 5px 0;
+   font-size: 0.9rem;
+}
+
+.transaction-item a {
+   color: #3498db;
+   text-decoration: none;
+}
+
+.transaction-item a:hover {
+   text-decoration: underline;
+}
+
+/* styles/ComponentStyles.css */
+.app-container {
+   padding: 20px;
+}
+
+.transaction-history {
+   margin-top: 10px;
+}
+
+.transaction-item {
+   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+   padding: 10px 0;
+}
+
+.transaction-item:last-child {
+   border-bottom: none;
+}
+
+.transaction-item p {
+   margin: 5px 0;
+   font-size: 14px;
+   color: #333;
+}
+
+.transaction-item a {
+   color: #00ff00;
+   text-decoration: none;
+}
+
+.transaction-item a:hover {
+   text-decoration: underline;
+}
+
+.wallet-address {
+   color: #fff;
+   font-size: 14px;
+   margin-top: 5px;
+}
