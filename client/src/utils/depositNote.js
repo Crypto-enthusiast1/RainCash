@@ -6,7 +6,7 @@ export const generateSecret = () => {
 };
 
 export const generateDepositNote = (secret, chainId) => {
-   return `mixer-${secret}-${chainId}`; // Заменили "tornado" на "mixer"
+   return `mixer-${secret}-${chainId}`;
 };
 
 export const extractSecretForDisplay = (note) => {
@@ -15,7 +15,7 @@ export const extractSecretForDisplay = (note) => {
 
 export const extractSecretFromNote = (note) => {
    const parts = note.split("-");
-   if (parts.length < 3 || parts[0] !== "mixer") { // Заменили "tornado" на "mixer"
+   if (parts.length < 3 || parts[0] !== "mixer") {
       throw new Error("Invalid Deposit Note format. Expected: mixer-<secret>-<chainId>");
    }
    const secret = parts[1];

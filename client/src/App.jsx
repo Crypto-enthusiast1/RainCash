@@ -106,7 +106,7 @@ function App() {
          )}
          <div className="app-container" style={{ display: "flex", gap: "20px" }}>
             {/* Основное окно (Депозит/Вывод) */}
-            <div className="card" style={{ flex: "1", minWidth: "400px" }}>
+            <div className="card" style={{ flex: "1", minWidth: "500px" }}>
                <div className="card-header">
                   <h1 className="title">Crypto Mixer</h1>
                </div>
@@ -174,8 +174,8 @@ function App() {
                                           <div
                                              key={index}
                                              className={`circle ${fixedDenominations.indexOf(selectedDenomination) >= index
-                                                   ? "filled"
-                                                   : ""
+                                                ? "filled"
+                                                : ""
                                                 }`}
                                              style={{
                                                 left: `${(index / (fixedDenominations.length - 1)) * 100}%`,
