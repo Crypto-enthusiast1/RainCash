@@ -1,0 +1,22 @@
+{
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Onze Recente Projecten",
+    "items": [
+      {
+        "id": 1,
+        "title": "MGI Legal",
+        "description": "Professionele juridische diensten website voor een in het VK gevestigd advocatenkantoor. Bevat servicelijsten, klantgetuigenissen en contactfunctionaliteit.",
+        "category": "Juridische Diensten",
+        "link": "https://mgilegal.co.uk/"
+      },
+      {
+        "id": 2,
+        "title": "EPS Corporation",
+        "description": "Bedrijfswebsite voor EPS Corporation UK. Toont zakelijke diensten, bedrijfsinformatie en professionele oplossingen.",
+        "category": "Bedrijf",
+        "link": "https://www.epscorporation.uk/"
+      }
+    ]
+  }
+}
