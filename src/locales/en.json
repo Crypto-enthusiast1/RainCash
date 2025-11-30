@@ -1,0 +1,22 @@
+{
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Our Recent Projects",
+    "items": [
+      {
+        "id": 1,
+        "title": "MGI Legal",
+        "description": "Professional legal services website for a UK-based law firm. Features include service listings, client testimonials, and contact functionality.",
+        "category": "Legal Services",
+        "link": "https://mgilegal.co.uk/"
+      },
+      {
+        "id": 2,
+        "title": "EPS Corporation",
+        "description": "Corporate website for EPS Corporation UK. Showcases business services, company information, and professional solutions.",
+        "category": "Corporate",
+        "link": "https://www.epscorporation.uk/"
+      }
+    ]
+  }
+}
